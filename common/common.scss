@@ -445,3 +445,12 @@ button, a {
     font-weight: 600;
     color: #4275E9;
 }
+
+/* Reorder Sidebar: Move Links below Tags */
+.sidebar .tags-section {
+    order: 1;
+}
+
+.sidebar .links-section {
+    order: 2;
+}
