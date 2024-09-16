@@ -383,3 +383,65 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
     display: flex;
   }
 }
+/* Updated font settings based on Figma design */
+body, html, p, li, span {
+    font-family: 'Inter', sans-serif;
+    color: #64748B;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    color: #252525;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #252525;
+}
+
+h3, h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #252525;
+}
+
+/* Subheadings (e.g., header text) */
+.header h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #252525;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* Sidebar and menu items */
+.sidebar .menu-item, .sidebar .category-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #64748B;
+}
+
+/* Cards and body text */
+.card p, .post-body, .description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #64748B;
+}
+
+/* Buttons and links */
+button, a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4275E9;
+}
