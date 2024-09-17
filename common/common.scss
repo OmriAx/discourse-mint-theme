@@ -42,6 +42,7 @@
       }
       .btn-primary {
         display: none;
+        color: #FFFFFF !important;
       }
     }
     .btn-more {
@@ -150,7 +151,7 @@ a {
 }
 
 #create-topic {
-  color: var(--secondary);
+  color: #FFFFFF;
   background: var(--tertiary);
   transition: all 0.3s linear;
   border-radius: var(--mint-border-radius);
@@ -166,7 +167,7 @@ a {
     transition: all 0.3s linear;
     border-radius: var(--mint-border-radius);
     .fa {
-      color: var(--secondary);
+      color: #FFFFFF;
     }
   }
 }
@@ -285,10 +286,12 @@ a {
   .fa {
     color: var(--secondary);
   }
+  color: #FFFFFF !important;
 }
 
 .btn-primary {
   border-radius: var(--mint-border-radius);
+  color: #FFFFFF !important;
 }
 
 .discourse-no-touch .btn-danger:hover {
@@ -427,14 +430,14 @@ h3, h4 {
 /* Sidebar and menu items */
 .sidebar .menu-item, .sidebar .category-item {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     color: #64748B;
 }
 
 /* Cards and body text */
 .card p, .post-body, .description {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     color: #64748B;
 }
 
@@ -442,7 +445,7 @@ h3, h4 {
 button, a {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: #4275E9;
 }
 
@@ -453,4 +456,78 @@ button, a {
 
 .sidebar .links-section {
     order: 2;
+}
+
+// Styles for primary buttons (like the Install button)
+.btn.btn-icon-text.btn-primary,
+.btn.btn-primary {
+  color: #FFFFFF !important;
+  
+  .d-icon {
+    color: #FFFFFF !important;
+  }
+  
+  .d-button-label {
+    color: #FFFFFF !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #FFFFFF !important;
+    
+    .d-icon,
+    .d-button-label {
+      color: #FFFFFF !important;
+    }
+  }
+}
+
+// Styles for the New Topic button
+.btn.btn-icon-text.btn-default#create-topic,
+#create-topic {
+  color: #FFFFFF !important;
+  
+  .d-icon {
+    color: #FFFFFF !important;
+  }
+  
+  .d-button-label {
+    color: #FFFFFF !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #FFFFFF !important;
+    
+    .d-icon,
+    .d-button-label {
+      color: #FFFFFF !important;
+    }
+  }
+}
+
+// Additional style to cover other potential default buttons that should have white text
+.btn.btn-default {
+  &[style*="background-color: #4275E9"],
+  &[style*="background: #4275E9"] {
+    color: #FFFFFF !important;
+    
+    .d-icon,
+    .d-button-label {
+      color: #FFFFFF !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #FFFFFF !important;
+      
+      .d-icon,
+      .d-button-label {
+        color: #FFFFFF !important;
+      }
+    }
+  }
 }
