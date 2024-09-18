@@ -1,25 +1,28 @@
 @mixin mint-card-bg {
-  background: var(--primary-very-low);
+  background: var(--mint-color-blue);  /* Use blue as card background */
 
   @media (prefers-color-scheme: light) {
     background: var(--header_background);
   }
 }
 
+
 :root {
   --mint-border-radius: 10px;
   --mint-hover-shadow: 4px 4px var(--tertiary-high);
-  --mint-color-mint: #75bdad;
-  --mint-color-blue: #e5f8ff;
+  --mint-color-mint: #4275E9; /* Change to a blue color */
+  --mint-color-blue: #e5f8ff; /* Light blue background */
 }
+
 
 $color-square-gradient: linear-gradient(
   4deg,
-  rgba(143, 236, 202, 0.29) 55%,
-  rgba(74, 247, 255, 0.08) 100%
+  rgba(66, 117, 233, 0.29) 55%,   /* Use blue tones */
+  rgba(74, 175, 219, 0.08) 100%   /* Use lighter blue tones */
 );
 $color-square-webkit-gradient: -webkit-linear-gradient(
   4deg,
-  rgba(143, 236, 202, 0.29) 55%,
-  rgba(74, 247, 255, 0.08) 100%
+  rgba(66, 117, 233, 0.29) 55%,   /* Use blue tones */
+  rgba(74, 175, 219, 0.08) 100%   /* Use lighter blue tones */
 );
+
