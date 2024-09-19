@@ -2,6 +2,62 @@
 @import "sidebar";
 @import "chat";
 
+// Target the html and body elements
+html, body {
+  background-color: var(--secondary) !important;
+}
+
+// Target the main content area
+#main-outlet {
+  background-color: var(--secondary) !important;
+}
+
+// Target the specific columns causing issues
+.wrap {
+  background-color: var(--secondary) !important;
+}
+
+// Ensure all containers use the correct background
+.container, .full-width {
+  background-color: var(--secondary) !important;
+}
+
+// Target any potential white boxes or cards
+.box, .boxed, .control-group, .topic-body, .topic-post {
+  background-color: var(--secondary) !important;
+}
+
+// Ensure text is visible
+body {
+  color: var(--primary) !important;
+}
+
+// Target the sidebar
+.sidebar-wrapper {
+  background-color: var(--secondary) !important;
+}
+
+// Target any potential overlays or modals
+.modal-backdrop, .modal-inner-container {
+  background-color: var(--secondary) !important;
+}
+
+// Ensure inputs and form elements adapt to dark mode
+input, textarea, select, .select-kit-header {
+  background-color: var(--secondary-very-high) !important;
+  color: var(--primary) !important;
+}
+
+// Target potential list items
+.topic-list-item, .category-list-item, .latest-topic-list-item {
+  background-color: var(--secondary) !important;
+}
+
+// Ensure headers adapt to dark mode
+.d-header {
+  background-color: var(--header_background) !important;
+}
+
 .d-editor-textarea-wrapper,
 .select-kit-header {
   border-radius: var(--mint-border-radius);
@@ -18,7 +74,7 @@
 }
 
 .d-header-mode .bootstrap-mode {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .alert.alert-info {
