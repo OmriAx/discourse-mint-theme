@@ -451,27 +451,62 @@ body::before {
   background: var(--secondary);
 }
 
-// Ensure all button icons are white
-.btn, .btn-primary, .btn-default, .btn-danger, .btn-link {
+
+:root {
+  // Create an inverse color of primary
+  --inverse-primary: calc(255 - var(--primary-rgb-r)) calc(255 - var(--primary-rgb-g)) calc(255 - var(--primary-rgb-b));
+  --inverse-primary-color: rgb(var(--inverse-primary));
+}
+
+// Use the inverse color for all icons
+.btn, .btn-primary, .btn-default, .btn-danger, .btn-link,
+.select-kit-header, .select-kit-collection .select-kit-row {
   .d-icon {
-    color: #ffffff !important;
+    color: var(--inverse-primary-color) !important;
   }
 
   &:hover, &:focus, &:active {
     .d-icon {
-      color: #ffffff !important;
+      color: var(--inverse-primary-color) !important;
     }
   }
 }
 
-// Special case for buttons that should maintain colored icons (e.g., the watching button)
-.watching, .btn-flat {
+// Specific icons that should always be inverse of primary
+.d-icon-magnifying-glass,
+.d-icon-chevron-left,
+.d-icon-d-watching,
+.d-icon-d-tracking,
+.d-icon-d-regular,
+.d-icon-d-muted,
+.d-icon-bell,
+.d-icon-far-bell,
+.d-icon-discourse-bell-exclamation,
+.d-icon-discourse-bell-slash,
+.d-icon-caret-down {
+  color: var(--inverse-primary-color) !important;
+}
+
+// For buttons where the icon color should contrast with the button background
+.btn-primary, .btn-danger {
   .d-icon {
-    color: inherit !important;
+    color: var(--secondary) !important;
   }
 }
 
-// Ensure dropdown menu icons remain visible
+// Special case for buttons that should maintain specific colors
+.watching .d-icon, .btn-flat .d-icon {
+  color: inherit !important;
+}
+
+// Ensure dropdown menu icons are visible
 .select-kit-collection .select-kit-row .d-icon {
   color: var(--primary) !important;
+}
+
+// Override for header icons to ensure visibility
+.d-header {
+  .d-icon {
+    color: var(--header_primary) !important;
+  }
 }
