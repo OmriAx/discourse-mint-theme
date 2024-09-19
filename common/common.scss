@@ -2,39 +2,26 @@
 @import "sidebar";
 @import "chat";
 
-// Target the html and body elements
-html, body {
+
+// Remove any forced background colors
+html, body, #main-outlet, .wrap, .full-width, .d-header, .d-header-wrap, .d-header-contents {
   background-color: var(--secondary) !important;
 }
 
-// Target the main content area
-#main-outlet {
-  background-color: var(--secondary) !important;
+// Ensure the header doesn't have a different background
+.d-header {
+  background: none !important;
+  box-shadow: none !important;
 }
 
-// Target the specific columns causing issues
-.wrap {
-  background-color: var(--secondary) !important;
-}
-
-// Ensure all containers use the correct background
-.container, .full-width {
-  background-color: var(--secondary) !important;
-}
-
-// Target any potential white boxes or cards
-.box, .boxed, .control-group, .topic-body, .topic-post {
-  background-color: var(--secondary) !important;
+// Remove any background from the logo area
+.title img {
+  background-color: transparent !important;
 }
 
 // Ensure text is visible
-body {
+body, .d-header {
   color: var(--primary) !important;
-}
-
-// Target the sidebar
-.sidebar-wrapper {
-  background-color: var(--secondary) !important;
 }
 
 // Target any potential overlays or modals
@@ -48,14 +35,10 @@ input, textarea, select, .select-kit-header {
   color: var(--primary) !important;
 }
 
-// Target potential list items
-.topic-list-item, .category-list-item, .latest-topic-list-item {
+// Target potential list items and cards
+.topic-list-item, .category-list-item, .latest-topic-list-item,
+.box, .boxed, .control-group, .topic-body, .topic-post {
   background-color: var(--secondary) !important;
-}
-
-// Ensure headers adapt to dark mode
-.d-header {
-  background-color: var(--header_background) !important;
 }
 
 .d-editor-textarea-wrapper,
@@ -444,4 +427,26 @@ summary.select-kit-header.single-select-header.dropdown-select-box-header {
   .custom-homepage-columns {
     display: flex;
   }
+}
+
+// If there's a specific gradient or background for the main content, apply it to the header as well
+.d-header {
+  background: var(--header_background) !important;
+}
+
+// Ensure the header content aligns with the main content
+.d-header .wrap {
+  background: none !important;
+}
+
+// If there's a custom background or gradient, make sure it extends to the top of the page
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--secondary);
 }
