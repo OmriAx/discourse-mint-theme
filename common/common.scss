@@ -450,3 +450,28 @@ body::before {
   z-index: -1;
   background: var(--secondary);
 }
+
+// Ensure all button icons are white
+.btn, .btn-primary, .btn-default, .btn-danger, .btn-link {
+  .d-icon {
+    color: #ffffff !important;
+  }
+
+  &:hover, &:focus, &:active {
+    .d-icon {
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Special case for buttons that should maintain colored icons (e.g., the watching button)
+.watching, .btn-flat {
+  .d-icon {
+    color: inherit !important;
+  }
+}
+
+// Ensure dropdown menu icons remain visible
+.select-kit-collection .select-kit-row .d-icon {
+  color: var(--primary) !important;
+}
